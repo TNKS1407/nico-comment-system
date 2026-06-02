@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Screen</title>
+  <style>
+    html,body{margin:0;padding:0;background:#000;overflow:hidden;}
+    canvas{display:block;width:100vw;height:100vh;}
+    #banner{position:fixed;left:10px;top:10px;color:#fff;font-family:system-ui,Segoe UI,Roboto,"Noto Sans JP",Meiryo,sans-serif;
+      font-size:14px;opacity:.55;z-index:5;user-select:none;}
+    #paused{position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+      color:#fff;font-family:system-ui,Segoe UI,Roboto,"Noto Sans JP",Meiryo,sans-serif;font-size:42px;
+      background:rgba(0,0,0,0.35);z-index:8;}
+    #timeOverlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+      background:#000;z-index:10;user-select:none;}
+    #timeOverlay .time{color:#fff;font-family:system-ui,Segoe UI,Roboto,"Noto Sans JP",Meiryo,sans-serif;
+      font-size:min(22vw,260px);font-weight:800;letter-spacing:0.02em;}
+    #timeOverlay .sub{position:absolute;bottom:36px;left:0;right:0;text-align:center;color:#aaa;font-size:16px;}
+  
+  .qrOverlay{
+    position:fixed;
+    z-index:9999;
+    display:none;
+    background:rgba(255,255,255,0.95);
+    padding:6px;
+    border-radius:10px;
+    box-shadow:0 2px 12px rgba(0,0,0,.35);
+    pointer-events:none;
+  }
+  .qrOverlay img{ display:block; }
+</style>
+</head>
+<body>
+  <div id="banner"></div>
+  <div id="paused">PAUSED</div>
+  <div id="timeOverlay"><div class="time" id="timeText">--:--</div><div class="sub">time</div></div>
+  <canvas id="c"></canvas>
+  <img id="qrOverlay" class="qrOverlay" alt="QR" />
+  <script src="/static/screen.js"></script>
+</body>
+</html>

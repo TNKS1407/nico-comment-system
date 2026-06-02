@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>コメント投稿</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="row">
+        <div>
+          <div style="font-size:20px;font-weight:700;">コメント投稿</div>
+          <div class="muted" id="hint">匿名・ニックネームなし / 絵文字は表示されません</div>
+        </div>
+        <div class="spacer"></div>
+        <span class="pill" id="eventPill">event: -</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <label for="text" class="muted">コメント</label>
+      <input id="text" type="text" maxlength="120" placeholder="例：888888 / おめでとう！ / 最高！" autocomplete="off">
+      <div style="height:10px"></div>
+
+      <div id="colorArea" style="display:none;">
+        <div class="muted" style="margin-bottom:6px;">文字色</div>
+        <div class="colors" id="colors"></div>
+        <div class="muted" style="margin-top:6px;font-size:12px;">※会場の見やすさを優先したい場合、運営側で一括色にすることがあります</div>
+        <div style="height:10px"></div>
+      </div>
+
+      <div class="row">
+        <button class="primary" id="send">送信</button>
+        <button id="clear">クリア</button>
+        <div class="spacer"></div>
+        <span class="muted" id="count">0</span>
+      </div>
+
+      <div style="height:10px"></div>
+      <div class="status" id="status" style="display:none;"></div>
+    </div>
+
+    <div class="card">
+      <div style="font-weight:700;margin-bottom:6px;">注意</div>
+      <ul class="muted" style="margin:0 0 0 18px;">
+        <li>個人情報（電話・メール・住所）やURLは自動で弾かれます</li>
+        <li>短時間の連投は制限されます</li>
+        <li>荒らし対策のため、一部の投稿は表示されない場合があります</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/static/post.js"></script>
+</body>
+</html>

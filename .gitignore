@@ -1,0 +1,8 @@
+runtime/
+cloudflared/
+data/comments.log.jsonl
+data/state.json
+*.bat
+*.cmd
+*.ps1
+*.blf

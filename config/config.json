@@ -1,0 +1,79 @@
+{
+  "eventKey": "A7kP3dQ9",
+  "baseUrl": "https://nico.tnks1407.com",
+  "listen": {
+    "host": "0.0.0.0",
+    "port": 3100
+  },
+  "admin": {
+    "username": "admin",
+    "password": "change-me",
+    "realm": "nico-comment-system"
+  },
+  "security": {
+    "hashSalt": "change-me-to-a-long-random-string"
+  },
+  "limits": {
+    "maxTextLen": 60,
+    "queueMax": 400
+  },
+  "delayMs": 3000,
+  "rateLimit": {
+    "windowMs": 1200,
+    "maxPerWindow": 2
+  },
+  "moderation": {
+    "ngWordsFile": "./config/ng_words.txt",
+    "rejectUrl": true,
+    "rejectEmail": true,
+    "rejectPhone": true,
+    "rejectRepeats": false,
+    "maxRepeatChar": 10,
+    "maxPunctRun": 10
+  },
+  "features": {
+    "guestColorEnabled": true,
+    "allowedGuestColors": [
+      "#FFFFFF",
+      "#FFFF00",
+      "#00FFFF",
+      "#FF66FF",
+      "#66FF66",
+      "#FFA500",
+      "#FF6666",
+      "#BBBBBB"
+    ],
+    "forceSingleColor": false
+  },
+  "renderer": {
+    "lanes": 10,
+    "speedPxPerSec": 240,
+    "fontFamily": "Noto Sans JP, Meiryo, Yu Gothic, sans-serif",
+    "fontSizePx": 48,
+    "strokePx": 6,
+    "defaultTextColor": "#FFFFFF",
+    "strokeColor": "#000000",
+    "laneGapPx": 10,
+    "entryGapPx": 40
+  },
+  "chime": {
+    "enabled": false,
+    "intervalMinutes": 10,
+    "durationSeconds": 20,
+    "pauseCommentsWhileShowing": true,
+    "format": "HH:mm"
+  },
+  "resendWindowMs": 600000,
+  "logging": {
+    "jsonl": true,
+    "path": "./data/comments.log.jsonl"
+  },
+  "screenQrOverlay": {
+    "enabled": false,
+    "position": "bottom-right",
+    "mode": "post",
+    "sizePx": 120,
+    "marginPx": 16,
+    "opacity": 0.95
+  }
+}

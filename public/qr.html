@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>QR（投稿）</title>
+  <style>
+    html,body{margin:0;padding:0;background:#000;color:#fff;height:100%;overflow:hidden;}
+    .wrap{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;}
+    img{width:min(78vh,78vw);height:auto;image-rendering:auto;}
+    .url{font-family:system-ui,Segoe UI,Roboto,"Noto Sans JP",Meiryo,sans-serif;font-size:18px;opacity:.0;} /* QRだけに見せる */
+    .hint{position:fixed;bottom:20px;left:0;right:0;text-align:center;color:#aaa;font-family:system-ui,Segoe UI,Roboto,"Noto Sans JP",Meiryo,sans-serif;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img id="qr" alt="QR">
+    <div class="url" id="url"></div>
+  </div>
+  <div class="hint">クリックでフルスクリーン</div>
+  <script src="/static/qr.js"></script>
+</body>
+</html>
