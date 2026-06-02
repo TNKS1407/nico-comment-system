@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nico-comment-system
+    runtime: node
+    buildCommand: echo "no build needed"
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: HASH_SALT
+        generateValue: true
+      - key: BASE_URL
+        sync: false
